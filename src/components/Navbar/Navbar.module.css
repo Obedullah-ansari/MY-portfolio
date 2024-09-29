@@ -3,7 +3,7 @@
     width: auto;
 }
 .wrapper{
-    max-width: 1200px;
+    max-width: 80%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -30,6 +30,15 @@ span{
 .social a img{
     width: 2rem;
 
+}
+.leeetcode{
+    width: 1rem;
+}
+.logo{
+    font-family:"Cedarville Cursive", cursive;
+    font-size: 2.8rem;
+    text-shadow: 3px 3px 14px cyan;
+    color: rgb(254, 248, 255);
 }
 @media(max-width: 1024px) {
    

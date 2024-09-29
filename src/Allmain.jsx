@@ -6,22 +6,29 @@ import Contact from "./components/Contact/Contact.jsx";
 import React from 'react'
 import Parallex from "./components/Parallex/Parallex.jsx";
 import Services from "./components/Services/Services.jsx";
+import {easeInOut, motion} from "framer-motion"
 
 function Allmain() {
   return (
    <>
-     <section id="Homepage">
-    <Navbar/>
-    <Hero/>
-    </section>
-    <section id="About">
-      <About/>
+     <motion.section id="Homepage"
+     initial={{rotatex:0 , rotatey:0}}
+     animate={{rotateX:[0,20,0], rotateY:[0,30,0], transition:{duration:2.5, ease: easeInOut}}}
+     >
+     <Navbar/>
+     <Hero/>
+     </motion.section>
+     
+    <section id="About" >
+    <About/>
     </section>
     <section id="Skills" >
 
       <Skills />
     </section>
-     <Services/>
+    
+    <Services />
+  
     <section>
       <Parallex/>
     </section>

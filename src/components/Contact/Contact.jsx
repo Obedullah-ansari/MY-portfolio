@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Contact.module.css";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import location from "./location.png";
-import instagram from "./instagram.png";
-import gamil from "./gmail.png";
-import telephone from "./telephone.png";
+import location from "./Images/location.png";
+import instagram from "./Images/instagram.png";
+import gamil from "./Images/gmail.png";
+import telephone from "./Images/telephone.png";
 import { useMediaQuery } from "@react-hook/media-query";
 import Listitem from "./Listitem";
 
@@ -32,9 +32,10 @@ const itemsdata= [
     des : "+919608833523"
   },
 ]
+
 function Contact() {
+
   const [emailvalid, setemailisvalid] = useState(false);
-   
   const isSmallScreen = useMediaQuery("(max-width: 768px)");
   function handelform(event) {
     const fd = new FormData(event.target);
@@ -90,7 +91,7 @@ function Contact() {
               placeholder="Email"
               onChange={handelchange}
             />
-            {emailvalid && <p className={styles.error}>Email must not be empty</p>}
+            {emailvalid && <p className={styles.error}>Email is required</p>}
 
             <textarea
               name="Leave a message"

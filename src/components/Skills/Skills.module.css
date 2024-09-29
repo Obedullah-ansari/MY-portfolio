@@ -1,9 +1,9 @@
 .container{
     width: 100%;
     height: 100vh;
-    padding: 0.2rem;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.599),rgba(4,9,30,0.7)),url('./navy-blue-concrete-wall-with-scratches.jpg');;
+    padding: 0.1rem;
     box-sizing: border-box;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
     padding-top:2rem;
     text-align: center;
     background-size: cover;
@@ -33,7 +33,7 @@
     padding: 1rem;
 }
 .skillsbuttons{
-    height: 25%;
+    height: 26%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@
     background: transparent;
     color: white;
     width: 50%;
-    height: 8rem;
+    height: 90%;
     cursor: pointer;  
    border-radius: 0.8rem;
    font-size: 1.3rem;
@@ -56,7 +56,7 @@
    outline: none;
 }
 .skillsbuttons button:hover{
-    box-shadow: inset 360px 0 0 0 white;
+    box-shadow: inset 400px 0 0 0 white;
     color: #252551;
     font-size: 1.4rem;
 }
@@ -150,6 +150,7 @@
         height: 3rem;
         cursor: pointer;  
         font-size: 0.8rem; 
+        background-color: rgba(255, 255, 255, 0.441);
     }
     .skillsbuttons button:hover{
         box-shadow: inset 360px 0 0 0 white;

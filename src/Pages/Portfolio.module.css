@@ -3,15 +3,17 @@
     width: 100%;
    overflow: hidden;
    color: white;
-   background-color: rgb(45, 23, 54);
+background-color: rgba(42, 34, 61, 0.849);
 }
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 .sidebar{
- height: 100vh;
+ height: 100%;
 
  width: 25%;
  display: flex;
@@ -21,19 +23,17 @@
  padding: 0.5rem;
 }
 .projects{
-    height: 73vh;
+    height: 70%;
     width: 100%;
     border-radius: 0.5rem;
-     text-align: center;
-    margin: 0.5rem;
-    background: linear-gradient(60deg,rgb(79, 35, 63) ,rgb(52, 43, 102));
+    text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(360deg, #0c0c1d, #aba8a8);
 }
 .projects ul{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 70vh;
+    height: 80%;
+    padding-top: 20%;
+
 }
 .btbox{
     width: 100%;
@@ -41,24 +41,31 @@
     padding: 1rem;
 }
 .list{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     list-style: none;
     padding: 0.5rem;
     cursor: pointer;
+     font-weight: 500;
+    color: rgb(25, 14, 32);
 }
 .rating{
-    height: 27vh;
-    background: linear-gradient(360deg,rgb(79, 35, 63) ,rgb(52, 43, 102));
+    height: 27%;
+    background: linear-gradient(180deg, #0c0c1d, #918f8f);
     width: 100%;
     border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }
 .bodypart{
-    height: 96vh;
-    background: linear-gradient(90deg,rgb(79, 35, 63) ,rgb(52, 43, 102));
+    height: 96%;
+    background: #0c0c1d;
     border-radius: 0.5rem;
     width: 75%;
     margin-right: 0.5rem;
-    margin-top: 0.5rem;
+    margin-top: 0.1rem;
     padding: 1rem;
 }
 .projectconatiner{
@@ -122,33 +129,61 @@
 .pikker{
     background: linear-gradient(rgb(43, 24, 57) ,rgb(52, 43, 102));
 }
-.openbtn{
+.btbox img{
     display: none;
-    background: none;
-    border: none;
+
 }
+.menu{
+    width: 2rem;
+    display: none;
+}
+.emptytext{
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center ;
+  gap: 0.3rem;
+}
+.emptytext img{
+    width: 10rem;
+    border-radius: 1rem;
+}
+
+.rating p{
+    font-weight: 600;
+    font-size: 1rem;
+    color:rgb(25, 14, 32)
+}
+
+
+
+
 @media (max-width:700px) {
     .sidebar{
         position: absolute;
         width: 85%;
-        background-color: rgb(63, 46, 81);
-        left: -350PX;
+        background-color: rgba(42, 34, 61, 0.849);
+        height: 100vh;
+        left: -400PX;
         z-index: 1;
         transition: 0.5s;
+        border-radius: 0.5rem;
        }
        .showsidebarhandel{
         position: absolute;
         width: 85%;
-        background-color: rgb(63, 46, 81);
         left: 0px;
         z-index: 1;
        }
        .bodypart{
         height: 100vh;
-        background: linear-gradient(90deg,rgb(79, 35, 63) ,rgb(52, 43, 102));
         border-radius: 0.5rem;
         width: 100%;
-        margin: 0.2rem;
+         margin: 0px;
         padding: 1rem;
         
     }
@@ -163,7 +198,7 @@
         margin: 0rem;
         box-sizing: border-box;
         border-radius: 1rem;
-        margin-top: auto
+        margin-top: 15%
     }
     .vedioconatiner{
         height: auto;
@@ -186,7 +221,12 @@
         width: 5rem;
         height: 5rem;
     }
-    .openbtn{
-        display: inline;
+    .btbox img{
+        display: inline-block;
+        width: 1rem;
+    }
+    .menu{
+        width: 2.7rem;
+        display: block;
     }
 }

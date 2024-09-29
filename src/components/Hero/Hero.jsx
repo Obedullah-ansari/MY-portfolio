@@ -1,9 +1,10 @@
 import React, { useRef } from "react";
 import styles from "./Hero.module.css";
-import heroimg from "./hero.png";
+import heroimg from "./bggg.png";
 import scroll from "./scroll.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import ContactModal from "./ContactModal";
 
 const textVariants = {
   initial: {
@@ -29,44 +30,40 @@ const textVariants = {
   },
 };
 
-
 function Hero() {
-  const slideVariants = {
-    initial: {
-      x: 0,
-    },
-    animate: {
-      x: "-200%",
-      transition: {
-        duration: 10,
-        repeat: Infinity,
-        repeatType: "mirror",
-      },
-    },
-  };
+  const modal = useRef();
+
+  function handelshowmodal() {
+    modal.current.showModal();
+  }
+
   return (
-    <> 
-     
-      <div className={styles.hero}> 
+    <>
+      <ContactModal ref={modal} />
+      <div className={styles.hero}>
         <div className={styles.warraper}>
           <motion.div
             className={styles.textconatiner}
             variants={textVariants}
             initial="initial"
             animate="animate"
-           >
+          >
             <motion.h2 variants={textVariants}>Obedullah Ansari</motion.h2>
             <motion.div variants={textVariants} className={styles.risponsive}>
               <motion.h1 variants={textVariants}>
-                web devloper and ui desiggner
+                web devloper and ui/ux desiggner
               </motion.h1>
               <motion.div className={styles.btn} variants={textVariants}>
                 <motion.button variants={textVariants} className={styles.btn1}>
-                  <Link className={styles.newpage} to="/portfolio">
+                  <Link className={styles.newpage} to="/MY-portfolio/portfolio">
                     portfolio
                   </Link>
                 </motion.button>
-                <motion.button variants={textVariants} className={styles.btn2} >
+                <motion.button
+                  variants={textVariants}
+                  className={styles.btn2}
+                  onClick={handelshowmodal}
+                >
                   contact
                 </motion.button>
               </motion.div>
@@ -79,13 +76,11 @@ function Hero() {
               alt=""
             />
           </motion.div>
-          
-        <motion.div className={styles.bgtext} variants={slideVariants} initial="initial" animate="animate">
-          Deam big !!
-        </motion.div>
 
           <div className={styles.imgcontainer}>
-            <motion.img src={heroimg} alt="" />
+            <motion.div className={styles.glowbox}>
+              <motion.img src={heroimg} alt="" />
+            </motion.div>
           </div>
         </div>
       </div>

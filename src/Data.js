@@ -27,8 +27,8 @@ export const projectdata =[
     id: 113,
     vedio : recordiary,
     image : diary,
-    title : "Record Diary",
-    text :" I developed a Project Diary in React, featuring task and project management. Utilizing useState, useRef, and useEffect for dynamic updates, the application offers an organized task bar. Tailwind CSS enhances the UI, providing a seamless and visually appealing experience for efficient project tracking. ",
+    title : "To-Do app",
+    text :" I developed a To-Do app in React, featuring task and project management. Utilizing useState, useRef, and useEffect for dynamic updates, the application offers an organized task bar. Tailwind CSS enhances the UI, providing a seamless and visually appealing experience for efficient project tracking. ",
     visit : "https://obedullah-ansari.github.io/record-diary/",
 },
 {   

@@ -9,7 +9,9 @@ function Sidebar() {
 
   function handleclick() {
     setisopen((prev) => !prev);
+
   }
+
 
   const variants = {
     initial: {
@@ -21,6 +23,7 @@ function Sidebar() {
       transition: {
         type: "spring",
         stiffness: 60,
+
       },
     },
     closed: {
@@ -29,6 +32,7 @@ function Sidebar() {
         type: "spring",
         stiffness: 300,
         damping: 40,
+       
       },
     },
   };
@@ -36,10 +40,10 @@ function Sidebar() {
   return (
     <motion.div className={styles.sidebar} initial="initial" animate={isopen ? "open" : "closed"} >
       <motion.div className={styles.bg} variants={variants}>
-        <Link />
+        <Link onclick={handleclick} />
       </motion.div>
 
-      <Togglebutton onclick={handleclick}  open={isopen} />
+      <Togglebutton onclick={handleclick}   />
     </motion.div>
   );
 }

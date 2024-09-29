@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styles from './About.module.css';
 import Myimg from './Myimg';
-import heroimg from './hero.png'
+import heroimg from './bggg.png'
 import Education from './Education';
 import Rewards from './Rewards';
 import Me from './Me';
 import {motion} from 'framer-motion';
+
 
 
   function About() {
@@ -27,16 +28,18 @@ import {motion} from 'framer-motion';
     open: {
       opacity: 1,
       transition: {
-        duration: 0.5, // Corrected the typo here
+        duration: 0.5, 
       },
     },
   
   };
   return (
    <>
-   <div className={styles.conatiner}>
+   <motion.div
+    className={styles.conatiner}
+    >
       <div className={styles .aboutme}>
-        <div> <h3>Hellow </h3></div>
+        <div> <h3>The Story So Far!</h3></div>
         <div className={styles.btnsection}>
           <button onClick={()=> handelclick("me")} className={about==="me" ? styles.shadow : undefined } >About me</button>
           <button  onClick={()=> handelclick("education") }  className={about==="education"? styles.shadow  : undefined } >Education</button>
@@ -50,7 +53,9 @@ import {motion} from 'framer-motion';
             { about==="education" && <Education/>}
             { about==="rewards" && <Rewards/>}
         </motion.div>
-        <button className={styles.cv}>download my cv</button>
+         <div  className={styles.cvbtnbox}>
+         <a className={styles.cv} href="https://drive.google.com/file/d/1uhHNh3U_Zov_w6nxcdc3EMdK8kBt5s8l/view">Download my cv</a>
+         </div>
       </div>
 
       <div className={styles.myheroimg}>
@@ -60,7 +65,7 @@ import {motion} from 'framer-motion';
        <img className={styles.astro} src={heroimg} alt="" />
       </div>
 
-   </div>
+   </motion.div>
    </>
   )
 }

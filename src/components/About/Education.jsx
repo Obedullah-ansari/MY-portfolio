@@ -14,10 +14,7 @@ function Education() {
         <p>Obtained a Bachelor's degree in Computer Science Engineering with a specialization in Data Science from Gandhi Engineering College, Bhubaneswar, Odisha, with an overall CGPA of 8.5.</p>
     </div>
 
-    <div>
-        <span>Post-Graduation :</span>
-        <p>Attained a Master's degree in Computer Science and Engineering from NIT Jamshedpur with an overall CGPA of 8.7.</p>
-    </div>
+   
 
 
     </div>

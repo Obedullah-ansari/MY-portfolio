@@ -12,19 +12,21 @@ function Datascience() {
                 labels: [
                   "Machine-Learning",
                   "Deep-learning",
-                  "AWS",
-                  "Numpie",
-                  "Panda"
+                  "python",
+                  "powerbi",
+                  "A.I",
+                  "Mathematics"
                 ],
                 datasets: [
                   {
-                    data: [68, 75, 88, 83,64],
+                    data: [68, 75, 88, 83,64,72 ],
                     backgroundColor: [
                       "#F4D03F ",
                       "#AF7AC5",
                       "#F1948A ",
                       "#76D7C4",
-                      "#B3B6B7"
+                      "#B3B6B7",
+                      "#FF00FF"
                     ],
                     borderWidth: 0,
                     hoverBackgroundColor: "cyan",

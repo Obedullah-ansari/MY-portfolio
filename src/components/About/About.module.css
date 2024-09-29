@@ -1,9 +1,9 @@
 .conatiner{
     display: flex;
-    padding: 1rem;
+    margin-top: 0.1rem;
     height: 100vh;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.599),rgba(4,9,30,0.7)),url("./blue-smooth-textured-paper-background.jpg");
+    background: linear-gradient(360deg, #0c0c1d, #111132);
     background-size: cover;
 }
 .aboutme{
@@ -49,26 +49,30 @@
     width: 100%;
 }
 .astro{
+    width: 18rem;
+ 
+    border-radius: 10rem;
     animation: animate  2s infinite ease alternate;
     position: absolute;
+    box-shadow: 0.1rem 0.1rem 8rem 2rem #F710ED  ;
 }
+
+
 @keyframes animate {
     to{
         transform: translateY(1rem)
     }
 }
-.astro{
-   width: 20rem;
-}
+
 .info{
-    padding: 1rem;
-    height: 35vh;
+    padding: 2%;
+    height: 50%;
 }
 .me{
     font-family: "PT Sans", sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.3rem;
 }
 .me span{
     font-size: 1.2rem;
@@ -81,7 +85,7 @@
     font-family: "PT Sans", sans-serif;
     display: flex;
     flex-direction: column;
-    gap: 1rem
+    gap: 1rem;
 }
 .education span{
     font-size: 1.2rem;
@@ -90,11 +94,16 @@
     font-weight: 600;
     text-shadow: 1px 1px 5px rgb(134, 44, 134);
 }
-
+.cvbtnbox{
+    margin-top: 0%;
+    height: 8%;
+    width: 100%;
+}
 .cv{
-    margin: 0.5rem;
+    margin: 1%;
     padding: 1rem;
-    font-weight: 700;
+    font-size: 0.8rem;
+    font-weight: bold;
     background: transparent;
     border: none;
     border: 1px solid rgb(241, 241, 241);
@@ -115,7 +124,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 100vh;
+        height: 98vh;
         width: 100%;
         padding: 0px;
         padding-top :2rem;
@@ -147,7 +156,7 @@
      .btnsection{
         display:flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        gap: 0.5rem;
      }
         .btnsection button{
             margin: 0.1rem;
@@ -155,20 +164,28 @@
             border-radius: 0.6rem;
         }
         .myheroimg{
-            height: auto;
+            height: 44vh;
             width: 100%
         }
         .astro{
-            width: 10rem;
+            width: 49%;
             z-index: 1;
+            box-shadow: 0.1rem 0.1rem 5rem 1rem #F710ED  
          }
          .makeitrisposive{
-           height: 35vh;
+           height: 100%;
             width: 100%;
         }
-        .cv{
-            margin: 0.1rem;
+        .cvbtnbox{
+            margin-top: 2%;
+            height: 3%;
+            width: 100%;
+            text-align: center;
+            
+        }
+        .cv{   
             padding: 0.4rem;
+            font-size: 0.9rem;
             border-radius: 0.6rem;
         }
         p{

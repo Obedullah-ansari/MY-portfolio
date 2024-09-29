@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 const variants={
   open:{
     transition:{
-      staggerChildren :0.08,
+      staggerChildren : 0.13,
     },
   },
   closed:{
@@ -27,8 +27,8 @@ const itemvariants={
   }
 };
 
-function Link() {
-  const items=["Homepage","Services", "Protfolio" ,"Skills" , "About","Contact" ]
+function Link({onclick}) {
+  const items=["Homepage","Services" ,"Skills" , "About","Contact" ]
 
   return (
     <motion.div className={styles.links} variants={variants}>
@@ -38,6 +38,7 @@ function Link() {
        variants={itemvariants} 
        whileHover={{scale :1.1}} 
        whileTap={{scale :0.95}}
+        onClick={onclick}
         >
          {item} </motion.a>
       ))}

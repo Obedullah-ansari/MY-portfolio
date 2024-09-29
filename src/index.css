@@ -1,6 +1,6 @@
 html{
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+  scroll-behavior : auto;
   font-family: "Nanum Gothic", sans-serif;
 }
 *{
@@ -20,6 +20,7 @@ a{
   color: inherit;
 }
 body{
+  scroll-snap-type: y mandatory;
   background-color: #0c0c1d;
   color: lightgray;
 }

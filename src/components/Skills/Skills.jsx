@@ -15,7 +15,8 @@ function Skills() {
     }
   return (
     <>
-      <div className={styles.container}>
+      <motion.div
+       className={styles.container} >
          <div className={styles.headingtext}>
          <h1>Why choose me </h1>
         <motion.span initial={{width :0, }} whileInView={{width: isSmallScreen?250 :600 , transition :{duration : 1}}}  className={styles.progressbar}  ></motion.span>
@@ -23,7 +24,7 @@ function Skills() {
         <div className={styles.wrapper}>
 
           <div className={styles.buttonsection}>
-          <h2>Click to see my progress</h2>
+               <h2>Click to see my progress</h2>
               <div className= {styles.skillsbuttons}>
                  <button onClick={ ()=> handelskills("Tech") } >Technical skills</button>
                  <button onClick={ ()=> handelskills("softskills") }>Soft skills</button>
@@ -45,7 +46,7 @@ function Skills() {
              {showskills ==="datatech" && <Datascience/>} 
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -1,215 +1,345 @@
-.hero{
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  width: 100%;
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+
+  background-size: cover;
+}
+.warraper {
+  height: calc(100vh - 100px);
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.textconatiner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+  z-index: 2;
+}
+.textconatiner img {
+  width: 3rem;
+}
+.imgcontainer {
+  height: 85%;
+  z-index: 2;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.glowbox {
+  height: 65%;
+  width: 60%;
+  border-radius: 1rem;
+  color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.imgcontainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+  }
+.glowbox::after,
+.glowbox::before {
+  content: "";
+  width: calc(100% + 4px);
+  border-radius: 1rem;
+  height: calc(100% + 4px);
+  background: linear-gradient(
+    45deg,
+    #fb0094,
+    #0000ff,
+    #87ff87,
+    #fafa7a,
+    #ff0000,
+    #fb0094,
+    #0000ff,
+    #87ff87,
+    #fafa7a,
+    #ff0000
+  );
+  background-size: 400%;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  animation: animated-shadow 10s linear infinite alternate;
+}
+.glowbox::after {
+  filter: blur(25px);
+}
+
+@keyframes animated-shadow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+.textconatiner h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1rem;
+  color: rgb(188, 27, 188);
+}
+.textconatiner h1 {
+  font-size: 4rem;
+}
+.btn1 {
+  margin: 0.5rem;
+  padding: 1rem;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 0.8rem;
+  color: rgb(19, 18, 18);
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px white;
+}
+.btn1:hover {
+  box-shadow: 1.3px 1.3px 13px 2px white;
+}
+.newpage {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-decoration: none;
+}
+.btn2 {
+  margin: 0.5rem;
+  font-weight: 700;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.contactdialog {
+  border: none;
+  width: 35%;
+  height: 60%;
+  top: 20%;
+  border-radius: 1rem;
+  left: 35%;
+  background-color: rgb(32, 31, 71);
+  overflow: hidden;
+}
+.contactdialog::backdrop {
+  background: rgba(7, 7, 7, 0.9);
+}
+.modalform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+.modalform input {
+  width: 50%;
+  height: 10%;
+  border: none;
+  background-color: #7f7fcab2;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 540;
+  font-size: 1rem;
+}
+.modalform textarea {
+  width: 50%;
+  color: white;
+  border: none;
+  background-color: #7f7fcab2;
+  border-radius: 0.5rem;
+  font-weight: 540;
+  font-size: 1rem;
+}
+.modalform input::placeholder {
+  color: white;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  font-weight: 540;
+}
+.modalform textarea::placeholder {
+  color: white;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  font-weight: 540;
+}
+.modalform input:-webkit-autofill::placeholder {
+  color: white; /* Change to whatever color you prefer */
+  font-size: 1rem;
+  font-weight: 540;
+  background-color: #414186b2;
+}
+
+.formbtn {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  height: 0px;
+}
+.btn3 {
+  padding: 1rem;
+  font-weight: 700;
+  width: 7rem;
+  background: transparent;
+  border: none;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 0.8rem;
+  color: #42428a;
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px white;
+}
+.btn3:hover {
+  box-shadow: 1.3px 1.3px 13px 2px white;
+}
+.cancel {
+  background: transparent;
+  border: none;
+  padding: 1rem;
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.error {
+  font-size: 0.8rem;
+  color: rgb(255, 255, 255);
+  font-weight: 550;
+}
+.gif {
+  height: 22vh;
+  width: 25%;
+}
+.heading {
+  font-size: 4.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
     height: calc(100vh - 100px);
     overflow: hidden;
-    width: 100%;
-    background: linear-gradient(180deg, #0c0c1d, #111132);
-}
-.warraper{
-    height: calc(100vh - 100px);
-    max-width: 1200px;
+    width: auto;
+  }
+
+  .warraper {
     margin: auto;
+    width: auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-}
-.textconatiner{
-    height: 100%;
+    overflow: hidden;
+  }
+  .textconatiner {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:2rem;
-    width: 50%;
-    z-index: 2;
-}
-.textconatiner img{
- width: 3rem;
-} 
-.imgcontainer{
-   height: 100%;
-   z-index: 2;
- 
-}
-.imgcontainer img{
-width: 30rem;
-}
-.textconatiner h2{
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 1rem;
-    color:  rgb(188, 27, 188);
-}
-.textconatiner h1{
- font-size: 4rem;
-}
-.btn1{
-    margin: 0.5rem;
-    padding: 1rem;
-    font-weight: 700;
-    background: transparent;
-    border: none;
-    border: 1px solid rgb(241, 241, 241);
-    border-radius: 0.8rem;
-    color: rgb(19, 18, 18);
-    cursor: pointer;
-    background-color: white;
-    box-shadow: 1px 1px 10px 1px white;
-}
-.btn1:hover{
-    box-shadow: 1.3px 1.3px 13px 2px white;
-}
-.newpage{
-    padding-top:1rem;
-    padding-bottom: 1rem;
-    text-decoration: none;
-}
-.btn2{
-    margin: 0.5rem;
-    font-weight: 700;
-    padding: 1rem;
-    background: transparent;
-    border: none;
-    border: 1px solid rgb(241, 241, 241);
-    border-radius: 0.8rem;
-    color: white;
-    cursor: pointer;
-}
-.bgtext{
-position: absolute;
-font-size: 15rem ;
-font-weight: 800;
-white-space: nowrap;
-color: #ffffff09;
-width: 60vw;
-}
-.dialogbox{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   
-
-}
-.dialogbox::backdrop{
-    background: rgba(0, 0, 0, 0.9);
-}
-.Contact{
+    gap: 1rem;
     height: 50vh;
+    flex-direction: column;
+    margin: 1rem;
+    width: auto;
+  }
+  .risponsive {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    background: linear-gradient(45deg, rgba(16, 16, 58, 0.992), rgb(202, 194, 248));
-}
-.contactbio{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .textconatiner h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    color: rgb(188, 27, 188);
+  }
+  .textconatiner h1 {
+    font-size: 1.5rem;
+  }
+  .imgcontainer {
+    height: 50%;
+    width: 100%;
+    align-items:safe;
+
+  }
+  .imgcontainer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.7rem;
+  }
+  .glowbox {
+    height: 70%;
+    width: 75%;
+    border-radius: 1rem;
+    margin-bottom: 10%;
+  }
+  .glowbox::after,
+  .glowbox::before {
+    content: "";
+    width: calc(100% + 2px);
+    border-radius: 1rem;
+    height: calc(100% + 2px);
+  }
+  .glowbox::after {
+    filter: blur(10px);
+  }
+
+  .btn {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
     justify-content: center;
-    width: 70%;  
-    height: 75vh;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: rgba(25, 25, 25, 0.359);
-    margin-bottom: 3.5rem;
-}
-.contactbio h2{
-    color: rgba(25, 13, 78, 0.858);
-}
-
-.contactbio input{
-  width: 70%;
-  height: 3rem;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-  border: none;
-  background-color:  #f9f4f4d3 ;
-}
-.contactbio textarea{
-    width: 70%;
-    border-radius: 0.3rem;
-    background-color:  #f9f4f4d3 ;
-}
-.submtbtn{
-    margin: 0.5rem;
-    padding: 1rem;
-    font-weight: 700;
-    background: transparent;
+  }
+  .bgtext {
+    position: absolute;
+    font-size: 3rem;
+    font-weight: bolder;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: auto;
+    top: 20rem;
+  }
+  .contactdialog {
     border: none;
-    border-radius: 0.8rem;
-    color: rgb(19, 18, 18);
-    cursor: pointer;
-    background-color: white;
-    box-shadow: 1px 1px 10px 1px rgb(103, 239, 239);
-    width: 20%;
-}
-.gif{
-    height: 22vh;
-    width: 25%;
-}
-.heading{
-    font-size: 4.5rem;
-}
-
-@media screen and (max-width: 768px)  {
-    .hero{
-        height: calc(100vh - 100px);
-        overflow: hidden;
-        width: auto;
-    }
-  
-    .warraper{
-        margin: auto;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        overflow: hidden;
-    }
-    .textconatiner{
-        display: flex;
-        gap:1rem;
-        height: 50vh;
-        flex-direction: column;
-         margin: 1rem;
-        width: auto;
-    }
-    .risponsive{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .textconatiner h2{
-        font-size: 1.7rem;
-        font-weight: 600;
-        letter-spacing: 0.5rem;
-        color:  rgb(188, 27, 188);
-    }
-    .textconatiner h1{
-        font-size: 1.5rem;
-       }
-   
-    .imgcontainer img{
-        width: 20rem;
-        }
-
-     .btn{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-     }
-     .bgtext{
-        position: absolute;
-        font-size: 3.5rem ;
-        font-weight:bolder;
-        white-space: nowrap;
-        color: #ffffff09;
-        width: auto;
-        top:20rem;
-        }
-  
+    width: 100%;
+    height: 50%;
+    top: 10%;
+    left: 5%;
+    height: 60%;
+    border-radius: 1rem;
+    background-color: rgb(32, 31, 71);
+    overflow: hidden;
+  }
+  .modalform input {
+    width: 80%;
+    height: 9%;
+  }
+  .modalform textarea {
+    width: 80%;
+  }
 }

@@ -31,7 +31,7 @@ const Single = ({item}) =>{
   const  y = useTransform(scrollYProgress ,[0,1], [-300,300]);
  
     return (
-        <section > 
+        <section id="Services" > 
           <div className={styles.container}>
         
             <div className={styles.wrapper}>
@@ -46,7 +46,7 @@ const Single = ({item}) =>{
         </section>
     )
 }
-function Newabout() {
+function Services() {
     const ref = useRef();
     const {scrollYProgress} = useScroll({target :ref , offset :["end end " , "start start"]})
 
@@ -71,4 +71,4 @@ function Newabout() {
   )
 }
 
-export default Newabout
+export default Services
